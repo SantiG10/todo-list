@@ -1,0 +1,72 @@
+<div class="container-2">
+  <p id="notice"><%= notice %></p>
+  <div class="row background-img margin-bottom">
+    <div class="col-md-6 col-sm-6 col-xs-12" id="count">
+      <h1>Todo List (<%= @incomplete_tasks.count %>) </h1>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 padding">
+      <input type="checkbox" class="filled-in" id="checkbox_complete" onchange="valueChanged()" checked="checked" />
+      <label for="checkbox_complete">Hide completed Tasks</label>
+    </div>
+  </div>
+
+  <%= link_to 'New Task', new_task_path, id: "new_link", remote: true, class: "btn btn-success margin-top" %>
+
+
+  <!-- <h5>Incomplete Task</h5> -->
+  <!-- <div class="tasks" id="incomplete_tasks">
+    <div class="row">
+      <% @incomplete_tasks.each do |task| %>
+        <div class="col s10">
+          <input type="checkbox" id="filled-in-box" class="filled-in"/>
+          <label class="title_incomplete" for="filled-in-box"><%= task.title %></label>
+        </div>
+        <div class="col s1">
+          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_task_path(task) %>
+        </div>
+        <div class="col s1">
+          <%= link_to '<i class="material-icons">delete</i>'.html_safe, task, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        <div class="col s12">
+          <hr>
+        </div>
+      <% end %>
+    </div>
+  </div> -->
+
+  <!-- <div id="complete_tasks">
+    <h5>Complete Task</h5>
+      <div class="row">
+        <% @complete_tasks.each do |task| %>
+          <div class="col s10">
+            <input type="checkbox" class="filled-in" id="filled-in-bo" checked="checked" />
+            <label class="title_complete" for="filled-in-bo"><%= task.title %></label>
+          </div>
+        <div class="col s1">
+          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_task_path(task) %>
+        </div>
+        <div class="col s1">
+          <%= link_to '<i class="material-icons">delete</i>'.html_safe, task, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        <div class="col s12">
+          <hr>
+        </div>
+        <% end %>
+      </div>
+  </div>
+</div> -->
+
+  <div class="tasks" id="incomplete_tasks">
+    <div class="margin-bottom">
+      <h2>Incomplete Tasks</h2>
+    </div>
+    <%= render @incomplete_tasks %>
+  </div>
+  <div class="tasks" id="complete_tasks">
+    <div class="margin-bottom">
+      <h2>Complete Tasks</h2>
+    </div>
+    <%= render @complete_tasks %>
+  </div>
+
+</div>

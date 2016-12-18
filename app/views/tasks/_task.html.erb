@@ -1,0 +1,12 @@
+<%= form_for task, remote: true do |f| %>
+  <%= f.check_box :complete %>
+  <% if task.complete? %>
+    <%= f.label :complete, task.title, class: "margin-left title_complete" %>
+  <% else %>
+    <%= f.label :complete, task.title, class: "margin-left" %>
+  <% end %>  
+  <%= f.submit "Update" %>
+  <%= link_to '<span class="glyphicon glyphicon-remove red" aria-hidden="true"></span>'.html_safe,
+    task, method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: "margin-left-remove" %>
+  <hr>
+<% end %>

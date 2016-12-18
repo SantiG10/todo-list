@@ -1,0 +1,8 @@
+<% if @task.complete? %>
+  $('#edit_task_<%= @task.id %>').appendTo('#complete_tasks');
+  $('#edit_task_<%= @task.id %>' ).removeClass("title_incomplete").addClass( "title_complete");
+<% else %>
+  $('#edit_task_<%= @task.id %>').appendTo('#incomplete_tasks');
+  $('#edit_task_<%= @task.id %>' ).removeClass("title_complete").addClass("title_incomplete");
+<% end %>
+$("#count").load(location.href+" #count>*","");

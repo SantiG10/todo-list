@@ -1,0 +1,65 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.title_complete {
+  label {
+    text-decoration: line-through !important;  
+  }
+   font-style: normal;
+   color: gray;
+ }
+
+.title_incomplete {
+   font-style: normal;
+   color: black !important;
+ }
+
+ .padding{
+   padding-top: 30px !important;
+ }
+
+// a {
+//   color: black !important;
+// }
+
+.red {
+  color: red;
+}
+
+#notice {
+  color: green;
+}
+
+.margin-top {
+  margin-top: 20px !important;
+}
+
+.margin-bottom {
+  margin-bottom: 20px !important;
+}
+
+.bottom {
+  padding-bottom: 20px !important;
+}
+
+.margin-left {
+  margin-left: 20px;
+}
+
+.margin-left-remove{
+    float: right;
+}
+
+.container-2 {
+  margin: auto;
+  width: 50%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.background-img {
+  background-image: url("background.jpg");
+}
