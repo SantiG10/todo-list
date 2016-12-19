@@ -26,7 +26,6 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     # @task = Task.new(task_params)
-    @incomplete_tasks = Task.where(complete: false)
     @task = Task.create!(task_params)
 
     respond_to do |format|
